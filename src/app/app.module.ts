@@ -17,7 +17,7 @@ import { RouterModule } from '@angular/router';
 import { AnimatedModalComponent } from './animated-modal/animated-modal.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ChartsModule } from 'ng2-charts';
+//import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -38,8 +38,7 @@ import { ChartsModule } from 'ng2-charts';
     StoreModule.forRoot({points: pointsReducer}),
     RouterModule,
     FormsModule,
-    CommonModule,
-    ChartsModule
+    CommonModule
   ],
   providers: [
     provideAnimationsAsync()
