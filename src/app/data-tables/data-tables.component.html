@@ -1,0 +1,104 @@
+<h4>Top Performers</h4>
+<!--
+<div class="table-container p-5">
+    <div class="title item">Team</div>
+    <div class="title item">Player</div>
+    <div class="title item">Scores</div>
+    <div class="title item">Wickets</div>
+    <div class="title item">Catches</div>
+    <div class="item">IND</div>
+    <div class="item">Virat</div>
+    <div class="item">450</div>
+    <div class="item">2</div>
+    <div class="item">10</div>
+    <div class="item">SA</div>
+    <div class="item">Aiden</div>
+    <div class="item">280</div>
+    <div class="item">14</div>
+    <div class="item">9</div>
+    <div class="item">AUS</div>
+    <div class="item">Head</div>
+    <div class="item">550</div>
+    <div class="item">0</div>
+    <div class="item">18</div>
+    <div class="item">SL</div>
+    <div class="item">Avishka</div>
+    <div class="item">480</div>
+    <div class="item">5</div>
+    <div class="item">8</div>
+    <div class="item">PAK</div>
+    <div class="item">Afridi</div>
+    <div class="item">90</div>
+    <div class="item">27</div>
+    <div class="item">15</div>
+    <div class="item">ENG</div>
+    <div class="item">Moeen</div>
+    <div class="item">300</div>
+    <div class="item">20</div>
+    <div class="item">11</div>
+    <div class="item">NZ</div>
+    <div class="item">Bolt</div>
+    <div class="item">50</div>
+    <div class="item">25</div>
+    <div class="item">7</div>
+    <div class="item">BAN</div>
+    <div class="item">Shakeeb</div>
+    <div class="item">400</div>
+    <div class="item">20</div>
+    <div class="item">17</div>
+    <div class="item">WI</div>
+    <div class="item">Nicholas</div>
+    <div class="item">570</div>
+    <div class="item">10</div>
+    <div class="item">18</div>
+</div>
+
+-->
+<!-- <table matSort (matSortChange)="sortData($event)">
+    <tr>
+        <th mat-sort-header="team">Team</th>
+        <th mat-sort-header="player">Player</th>
+        <th mat-sort-header="scores">Scores</th>
+        <th mat-sort-header="wickets">Wickets</th>
+        <th mat-sort-header="catches">Catches</th>
+    </tr>
+    @for(item of sortedData; track item) {
+        <tr>
+            <td>{{item.team}}</td>
+            <td>{{item.player}}</td>
+            <td>{{item.scores}}</td>
+            <td>{{item.wickets}}</td>
+            <td>{{item.catches}}</td>
+        </tr>
+    }
+</table> -->
+<div class="table-container" matSort (matSortChange)="sortData($event)">
+    <div class="title item" mat-sort-header="team">Team</div>
+    <div class="title item" mat-sort-header="player">Player</div>
+    <div class="title item" mat-sort-header="scores">Scores</div>
+    <div class="title item" mat-sort-header="wickets">Wickets</div>
+    <div class="title item" mat-sort-header="catches">Catches</div>
+    @for(item of sortedData; track item) {
+        <div class="item">{{item.team}}</div>
+        <div class="item">{{item.player}}</div>
+        <div class="item">{{item.scores}}</div>
+        <div class="item">{{item.wickets}}</div>
+        <div class="item">{{item.catches}}</div>
+    }
+</div>
+
+<h4>Title Winners!</h4>
+<div class="table-container2" matSort (matSortChange)="sortData2($event)"> 
+    <div class="title item" mat-sort-header="year">Year</div>
+    <div class="title item" mat-sort-header="winner">Winner</div>
+    <div class="title item" mat-sort-header="runnerUp">Runner Up</div>
+    <div class="title item" mat-sort-header="mom">Man of the Match(MoM)</div>
+    @for(item2 of sortedData2; track item2) {
+        <div class="item">{{item2.year}}</div>
+        <div class="item">{{item2.winner}}</div>  
+        <div class="item">{{item2.runnerUp}}</div> 
+        <div class="item">{{item2.mom}}</div>
+    }
+</div>
+<mat-paginator [length]="2" aria-label="Select Page"></mat-paginator>
+

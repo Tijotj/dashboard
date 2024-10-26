@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h4>Admin Dashboard Overview</h4> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Today's match is between IND X SA</p>
+            <p>Please click on the winning team below to add them to the points table.</p>
+            <button (click)="pointsIND()">IND</button> 
+        </div>
+        <div class="col-sm-6">
+            <div class="overview-container">
+                <div class="point-table">
+                    <div class="title item">Rank</div>
+                    <div class="title item">Team</div>
+                    <div class="title item">Points</div> 
+                    <div class="item">1</div>
+                    <div class="item">IND</div>
+                    <div class="item">{{ points$ | async }}</div>  
+                    <div class="item">2</div>
+                    <div class="item">SA</div>
+                    <div class="item"></div> 
+                    <div class="item">3</div>
+                    <div class="item">NZ</div>                 
+                    <div class="item"></div>
+                </div>
+            </div>        
+        </div>        
+    </div>
+</div>

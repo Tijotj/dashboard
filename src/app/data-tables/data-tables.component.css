@@ -1,0 +1,16 @@
+.table-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.table-container .item {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.table-container2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.table-container2 .item {
+    border: 1px solid #ccc;
+    padding: 10px;
+}

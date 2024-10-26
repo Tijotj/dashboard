@@ -1,0 +1,19 @@
+.overview-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.overview-container .group {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.overview-container .group:hover {
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+.overview-container .point-table {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.overview-container .point-table .item {
+    border: 1px solid #ccc;
+    padding: 10px;
+}

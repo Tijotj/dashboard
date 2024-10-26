@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 pt-5">
+            <a class="bg-primary text-white p-2 rounded-1" data-bs-target="#qnsModal" data-bs-toggle="modal">Open Modal</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="qnsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Questions?</h4>
+                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">X</button>
+            </div>
+            <div class="modal-body">
+                <form #userForm="ngForm">
+                    <div class="p-2">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" type="text" class="form-control" name="name" [(ngModel)]="name" required />
+                    </div>
+                    <div class="p-2">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" type="email" class="form-control" name="email" [(ngModel)]="email" required />
+                    </div>
+                    <div class="p-2">
+                        <label for="qns" class="form-label">Message</label>
+                        <textarea id="qns" class="form-control" name="message" [(ngModel)]="message" required ></textarea>
+                    </div>
+                    <div class="p-2">
+                        <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                    </div>
+                </form>
+                @if(displayMsg) {
+                    <div>
+                        <p>Your message is submitted!</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

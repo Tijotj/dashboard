@@ -1,0 +1,11 @@
+<h5 class="text-primary" (click)="toggleMenus()">Menus</h5>
+@if(menuItems) {
+    <nav>
+        <ul>
+            <li><a routerLink="/overview">Overview</a></li>
+            <li><a routerLink="/data-tables">Data Tables</a></li>
+            <li><a routerLink="/charts">Charts/Graphs</a></li>
+            <li class="last-item"><a routerLink="/animated-modal">Modal Popup</a></li>
+        </ul>
+    </nav>
+}
